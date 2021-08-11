@@ -164,23 +164,75 @@
 
 //Sorting fruits
 
-let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
-let appleShelf = document.getElementById("apple-shelf")
-let orangeShelf = document.getElementById("orange-shelf")
+// let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+// let appleShelf = document.getElementById("apple-shelf")
+// let orangeShelf = document.getElementById("orange-shelf")
 
 // Create a function that puts the apples onto the appleShelf
 // and the oranges onto the orangeShelf. Use a for loop,
 // a conditional statement, and the textContent property.
 
-function sortFruits(){
-    for (let i=0; i < fruit.length; i++){
-        // console.log(fruit[i]);
-        if (fruit[i]=== "🍎"){
-            appleShelf.textContent += "🍎"
-        //used the else if just incase we have other fruits added to the stack
-        }else if(fruit[i]=== "🍊") {
-            orangeShelf.textContent += "🍊"
-        }
+// function sortFruits(){
+//     for (let i=0; i < fruit.length; i++){
+//         // console.log(fruit[i]);
+//         if (fruit[i]=== "🍎"){
+//             appleShelf.textContent += "🍎"
+//         //used the else if just incase we have other fruits added to the stack
+//         }else if(fruit[i]=== "🍊") {
+//             orangeShelf.textContent += "🍊"
+//         }
+//     }
+// }
+// console.log(sortFruits())
+
+
+
+
+
+// let myCourses = ['Learn Css Animations','UI Design fundamentals', 'Intro to clean code','Functionality theory']
+
+// function myFunct(arr){
+//  for(let i=0; i<arr.length; i++){
+//     console.log(arr[i])
+    
+//  }
+// }
+
+// myFunct(myCourses)
+
+
+// let a = localStorage.getItem('key')
+// console.log(a)
+
+// let data = [
+//     {
+//         player:"jane",
+//         score: 52
+//     },
+//     {
+//         player:"Mark",
+//         score:41
+//     }
+// ]
+
+// const logBtn = document.querySelector('#log-btn')
+// logBtn.addEventListener('click',function(){
+//     console.log(data[0].score)
+// })
+
+function generateSentence(desc, arr){
+    let baseString = `The ${arr.length} ${desc} are `
+    const lastString = arr.length-1
+    for(let i=0; i<arr.length; i++){
+        if (i === lastString){
+            baseString += arr[i]
+        }else{
+            baseString += arr[i] +','
+        }  
     }
+    return baseString
+   
 }
-console.log(sortFruits())
+
+let out = generateSentence("largest countries",["china","japan", "Nigeria"])
+console.log(out)
